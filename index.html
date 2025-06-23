@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://sigagis.conagua.gob.mx/t_estudios24/img/favicon.ico" rel="shortcut icon">
+    <title>Proyecto Convertidor de Unidades - Francisco Javier Castillo Alanis</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Convertidor de Unidades</h1>
+    
+        <div class="subtitulo">
+                    <div class="converter-card">
+                        <i class="fa fa-align-left" aria-hidden="true"><b>Curso:</b> JavaScript (16 al 20 de junio, 2025)</i>
+                        <i class="fa fa-align-left" aria-hidden="true"><b>Impartido por:</b> Laboratorio de Multimedia e Internet - Fac. de Ingeniería, UNAM</i>
+                        <i class="fa fa-align-left" aria-hidden="true"><b>Alumno:</b> Francisco Javier Castillo Alanis</i>
+                        <i class="fa fa-align-left" aria-hidden="true"></i><b>Descripción:</b></i>
+                        <i class="fa fa-align-left" aria-hidden="true">Como proyecto final, cada estudiante deberá implementar 
+                            la lógica en JavaScript para un convertidor de unidades 
+                            que abarque las siguientes categorías: 
+                            longitud, volumen, peso y temperatura. 
+                            El HTML y el CSS necesarios para la interfaz gráfica
+                            serán proporcionados por el profesor, por lo que el enfoque 
+                            principal será la escritura de funciones en JavaScript que tomen 
+                            un valor numérico y una unidad de entrada, 
+                            y calculen su equivalente en otra unidad predeterminada. 
+                            Las funciones deberán responder a eventos en la página y 
+                            actualizar el DOM para mostrar el resultado de la conversión. 
+                            Se espera el uso correcto de estructuras de control como switch, 
+                            manipulación del DOM y buenas prácticas de codificación.</i>
+    </div>
+    </div>
+    
+        <div class="converter-grid">
+            <div class="converter-card">
+                <h2>📏Conversión de Longitud</h2>
+                <input type="number" id="longitudInput" placeholder="Introduce un Valor" class="input-field">
+                <select id="longitudUnitFrom" class="select-field">
+                    <option value="m">Metros</option>
+                    <option value="km">Kilómetros</option>
+                    <option value="cm">Centímetros</option>
+                    <option value="mi">Millas</option>
+                    <option value="ft">Pies</option>
+                </select>
+                <select id="longitudUnitTo" class="select-field">
+                    <option value="m">Metros</option>
+                    <option value="km">Kilómetros</option>
+                    <option value="cm">Centímetros</option>
+                    <option value="mi">Millas</option>
+                    <option value="ft">Pies</option>
+                </select>
+                <button onclick="convertLongitud()" class="convert-button">📏Convertir</button>
+                <div class="result-display" id="longitudResult"></div>
+            </div>
+
+            <div class="converter-card">
+                <h2>🧊Conversión de Volumen</h2>
+                <input type="number" id="volumenInput" placeholder="Introduce un Valor" class="input-field">
+                <select id="volumenUnitFrom" class="select-field">
+                    <option value="l">Litros</option>
+                    <option value="ml">Mililitros</option>
+                    <option value="gal">Galones</option>
+                    <option value="m3">Metros Cúbicos</option>
+                </select>
+                <select id="volumenUnitTo" class="select-field">
+                    <option value="l">Litros</option>
+                    <option value="ml">Mililitros</option>
+                    <option value="gal">Galones</option>
+                    <option value="m3">Metros Cúbicos</option>
+                </select>
+                <button onclick="convertVolumen()" class="convert-button">🧊Convertir</button>
+                <div class="result-display" id="volumenResult"></div>
+            </div>
+
+            <div class="converter-card">
+                <h2>⚖️Conversión de Peso</h2>
+                <input type="number" id="pesoInput" placeholder="Introduce un Valor" class="input-field">
+                <select id="pesoUnitFrom" class="select-field">
+                    <option value="kg">Kilos</option>
+                    <option value="g">Gramos</option>
+                    <option value="lb">Libras</option>
+                    <option value="oz">Onzas</option>
+                </select>
+                <select id="pesoUnitTo" class="select-field">
+                    <option value="kg">Kilos</option>
+                    <option value="g">Gramos</option>
+                    <option value="lb">Libras</option>
+                    <option value="oz">Onzas</option>
+                </select>
+                <button onclick="convertPeso()" class="convert-button">⚖️Convertir</button>
+                <div class="result-display" id="pesoResult"></div>
+            </div>
+
+            <div class="converter-card">
+                <h2>🌡️Conversión de Temperatura</h2>
+                <input type="number" id="temperaturaInput" placeholder="Introduce un Valor" class="input-field">
+                <select id="temperaturaUnitFrom" class="select-field">
+                    <option value="C">Celsius</option>
+                    <option value="F">Fahrenheit</option>
+                    <option value="F">Kelvin</option>
+                </select>
+                <select id="temperaturaUnitTo" class="select-field">
+                    <option value="C">Celsius</option>
+                    <option value="F">Fahrenheit</option>
+                    <option value="K">Kelvin</option>
+                </select>
+                <button onclick="convertTemperatura()" class="convert-button">🌡️Convertir</button>
+                <div class="result-display" id="temperaturaResult"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
